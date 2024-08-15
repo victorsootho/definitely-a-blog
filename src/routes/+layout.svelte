@@ -1,8 +1,18 @@
 <!-- src/routes/+layout.svelte -->
-<div class="header">
-	<a href="/">My Svelte Blog</a>
+
+<script lang="ts">
+	import '../app.css';
+</script>
+
+<div class="header bg-gray-600 text-white p-8 mb-8 rounded-">
+	<a href="/" class="text-2xl no-underline hover:underline cursor-pointer">My Svelte Blog</a>
+	<a href="/new-blog" class="ml-4 text-lg no-underline hover:underline cursor-pointer"
+		>Create New Blog</a
+	>
 </div>
-<div class="container">
+<div
+	class="container mx-auto px-4 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl"
+>
 	<slot />
 </div>
 
@@ -10,43 +20,5 @@
 	@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 	* {
 		font-family: 'Inter', Helvetica, Arial, serif;
-	}
-	.header {
-		color: white;
-		background-color: #696969;
-		padding: 30px;
-		margin-bottom: 30px;
-		border-radius: 10px;
-	}
-	.header a {
-		all: unset;
-		font-size: 28px;
-	}
-	.header a:hover {
-		text-decoration: underline;
-		cursor: pointer;
-	}
-	.container {
-		width: 100%;
-		max-width: 1140px;
-		margin-right: auto;
-		margin-left: auto;
-		padding-right: 15px;
-		padding-left: 15px;
-	}
-	@media (min-width: 768px) {
-		.container {
-			max-width: 720px;
-		}
-	}
-	@media (min-width: 992px) {
-		.container {
-			max-width: 960px;
-		}
-	}
-	@media (min-width: 1200px) {
-		.container {
-			max-width: 1140px;
-		}
 	}
 </style>
